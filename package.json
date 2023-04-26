@@ -1,0 +1,64 @@
+{
+    "name": "weekly",
+    "version": "1.0.0",
+    "description": "前端周刊",
+    "private": true,
+    "dependencies": {
+        "@midwayjs/bootstrap": "^3.0.0",
+        "@midwayjs/core": "^3.0.0",
+        "@midwayjs/decorator": "^3.0.0",
+        "@midwayjs/typegoose": "3",
+        "@midwayjs/typeorm": "3",
+        "@midwayjs/web": "^3.0.0",
+        "@typegoose/typegoose": "^11.0.2",
+        "dayjs": "^1.11.7",
+        "dotenv": "^16.0.3",
+        "egg": "^2.0.0",
+        "mongodb": "^5.3.0",
+        "mongoose": "^7.0.5",
+        "tsconfig-paths": "^4.2.0",
+        "typeorm": "^0.3.15"
+    },
+    "devDependencies": {
+        "@midwayjs/cli": "^2.0.0",
+        "@midwayjs/egg-ts-helper": "^1.0.1",
+        "@midwayjs/mock": "^3.0.0",
+        "@ryan-liu/eslint-config-ts": "^0.1.2",
+        "@types/jest": "^29.2.0",
+        "@types/node": "14",
+        "cross-env": "^6.0.0",
+        "dot-template-types": "^0.3.0",
+        "egg-mock": "^3.26.0",
+        "jest": "^29.2.2",
+        "mwts": "^1.0.5",
+        "ts-jest": "^29.0.3",
+        "typescript": "~4.8.0"
+    },
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "scripts": {
+        "start": "node bootstrap.js",
+        "dev": "cross-env ets && cross-env NODE_ENV=local midway-bin dev --ts",
+        "test": "midway-bin test --ts",
+        "cov": "midway-bin cov --ts",
+        "lint": "mwts check",
+        "lint:fix": "mwts fix",
+        "ci": "npm run cov",
+        "build": "midway-bin build -c",
+        "dev:dtpl": "tsc -P .dtpl/tsconfig.json -w",
+        "start:service": "yarn native:redis & yarn native:mongo",
+        "native:redis": "docker-compose -f docker-compose-local.yml run --rm -p 6379:6379 redis",
+        "native:mongo": "docker-compose -f docker-compose-local.yml run --rm -p 27017:27017 mongo"
+    },
+    "midway-bin-clean": [
+        ".vscode/.tsbuildinfo",
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "MIT"
+}

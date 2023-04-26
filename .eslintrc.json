@@ -1,0 +1,13 @@
+{
+    "extends": ["./node_modules/mwts/", "@ryan-liu/ts"],
+    "ignorePatterns": [
+        "node_modules",
+        "dist",
+        "test",
+        "jest.config.js",
+        "typings"
+    ],
+    "env": {
+        "jest": true
+    }
+}

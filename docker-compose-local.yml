@@ -1,0 +1,34 @@
+version: "3"
+services:
+    web:
+        build: .
+        command: yarn dev
+        environment:
+            APP_ENV: local
+            APP_NAME: weekly
+            SENTRY_DSN: ""
+            REDIS_CACHE_HOST: redis
+            REDIS_CACHE_PORT: 6379
+            REDIS_CACHE_PWD: ""
+            REDIS_CACHE_DB: 6
+            MONGODB_URL: mongodb://mongo:27017/weekly
+            DOMAIN_NAME: localhost
+            PATH_PREFIX: /weekly/api
+            NODE_REPLICAD: 2
+            LIMIT_CPU: "1"
+            LIMIT_MEMORY: 1000M
+        volumes:
+            - ./:/app/
+        ports:
+            - 7001:7001
+        links:
+            - redis
+            - mongo
+    redis:
+        image: redis:alpine
+        ports:
+            - 6379:6379
+    mongo:
+        image: mongo:latest
+        ports:
+            - 27017:27017
