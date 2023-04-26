@@ -8,7 +8,8 @@
         "emitDecoratorMetadata": true,
         "inlineSourceMap": true,
         "noImplicitThis": true,
-        "noUnusedLocals": true,
+        // 消除未使用的变量
+        "noUnusedLocals": false,
         "stripInternal": true,
         "skipLibCheck": true,
         "pretty": true,
@@ -23,7 +24,8 @@
         "typeRoots": ["./typings", "./node_modules/@types"],
         "types": ["node", "jest"]
     },
-    "exclude": ["dist", "node_modules", "test"]
+    "exclude": ["dist", "node_modules", "test"],
+    "include": ["src", "typings"]
     // "ts-node": {
     //     "compilerOptions": {
     //         "module": "commonjs"

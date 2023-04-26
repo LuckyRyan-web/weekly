@@ -39,7 +39,7 @@
     },
     "scripts": {
         "start": "node bootstrap.js",
-        "dev": "cross-env ets && cross-env NODE_ENV=local midway-bin dev --ts",
+        "dev": "cross-env ets && cross-env NODE_ENV=local midway-bin dev --ts --port=9000",
         "test": "midway-bin test --ts",
         "cov": "midway-bin cov --ts",
         "lint": "mwts check",

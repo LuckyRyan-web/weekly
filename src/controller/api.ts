@@ -1,4 +1,4 @@
-import { Inject, Controller, Post, Query, Get } from '@midwayjs/core'
+import { Inject, Controller, Post, Query, Get, Body } from '@midwayjs/core'
 import { Context } from 'egg'
 import { IGetUserResponse } from '../interface'
 import { UserService } from '@/service/user'
@@ -23,8 +23,18 @@ export class APIController {
     }
 
     @Post('/get_user')
-    async getUser(@Query('uid') uid: string): Promise<IGetUserResponse> {
+    async getUser(@Body('uid') uid: string): Promise<IGetUserResponse> {
+        console.log('uid', uid)
         const user = await this.userService.getUser({ uid })
         return { success: true, message: 'OK', data: user }
+    }
+
+    @Post('/create_user')
+    async createUser() {
+        const res = await this.userService.createUser()
+
+        return {
+            data: res,
+        }
     }
 }
