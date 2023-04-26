@@ -1,4 +1,4 @@
-declare module APIHome {
+declare module APIArticle {
     interface HomeServerInputOptions {
         uid: string
     }

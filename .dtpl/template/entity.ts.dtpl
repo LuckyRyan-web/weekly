@@ -1,0 +1,13 @@
+/**
+ * ${ModuleName}
+ * @author $user
+ * @date $datetime
+ * @since ${pkg.version}
+ */
+import { prop } from '@typegoose/typegoose'
+import { EntityModel } from '@midwayjs/typegoose'
+
+@EntityModel()
+export class ${ModuleName} {
+
+}

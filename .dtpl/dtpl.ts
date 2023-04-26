@@ -27,15 +27,19 @@ export default function (source: _.Source): _.IDtplConfig {
         templates: [
             {
                 name: 'template/controller.ts.dtpl',
-                matches: 'src/controller/**/*.ts'
+                matches: 'src/controller/**/*.ts',
             },
             {
                 name: 'template/service.ts.dtpl',
-                matches: 'src/service/**/*.ts'
-            }
+                matches: 'src/service/**/*.ts',
+            },
+            {
+                name: 'template/entity.ts.dtpl',
+                matches: 'src/entity/**/*.ts',
+            },
         ],
         globalData: {
-            projectName: 'midway-serverless'
-        }
+            projectName: 'midway-serverless',
+        },
     }
 }

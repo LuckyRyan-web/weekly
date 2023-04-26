@@ -2,6 +2,7 @@ import { Inject, Controller, Post, Query, Get, Body } from '@midwayjs/core'
 import { Context } from 'egg'
 import { IGetUserResponse } from '../interface'
 import { UserService } from '@/service/user'
+import { WebhookService } from '@/service/webhook'
 
 @Controller('/api')
 export class APIController {
@@ -11,14 +12,13 @@ export class APIController {
     @Inject()
     userService: UserService
 
+    @Inject()
+    webhookService: WebhookService
+
     @Get('/')
     async home() {
-        const data: APIHome.HomeServerInputOptions = {
-            uid: '1',
-        }
         return {
             msg: 'hello eggjs',
-            data,
         }
     }
 
@@ -36,5 +36,12 @@ export class APIController {
         return {
             data: res,
         }
+    }
+
+    @Post('/send')
+    async sendWebhook(@Body() data: APIWebhook.WebhookData) {
+        const res = await this.webhookService.feishu(data)
+
+        return res
     }
 }

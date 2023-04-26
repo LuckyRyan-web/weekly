@@ -8,6 +8,7 @@ export default (appInfo: MidwayAppInfo) => {
         egg: {
             port: 7001,
         },
+        webhook: process.env.APP_WEBHOOK,
         // security: {
         //   csrf: false,
         // },

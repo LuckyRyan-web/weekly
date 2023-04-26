@@ -9,11 +9,16 @@ export class UserService {
     userModel: ReturnModelType<typeof User>
 
     async getUser(options: IUserOptions) {
+        const res = await this.userModel.find({}).exec()
+
         return {
             uid: options.uid,
-            username: 'mockedName',
-            phone: '12345678901',
-            email: 'xxx.xxx@xxx.com',
+            users: res.map(v => {
+                return {
+                    name: v.name,
+                    jobs: v.jobs,
+                }
+            }),
         }
     }
 

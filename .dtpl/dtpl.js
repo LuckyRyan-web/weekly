@@ -24,16 +24,20 @@ function default_1(source) {
         templates: [
             {
                 name: 'template/controller.ts.dtpl',
-                matches: 'src/controller/**/*.ts'
+                matches: 'src/controller/**/*.ts',
             },
             {
                 name: 'template/service.ts.dtpl',
-                matches: 'src/service/**/*.ts'
-            }
+                matches: 'src/service/**/*.ts',
+            },
+            {
+                name: 'template/entity.ts.dtpl',
+                matches: 'src/entity/**/*.ts',
+            },
         ],
         globalData: {
-            projectName: 'midway-serverless'
-        }
+            projectName: 'midway-serverless',
+        },
     };
 }
 exports.default = default_1;

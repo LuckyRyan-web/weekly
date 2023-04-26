@@ -4,5 +4,6 @@ declare namespace NodeJS {
         APP_ENV: string
         DOMAIN_NAME: string
         PATH_PREFIX: string
+        APP_WEBHOOK: string
     }
 }
