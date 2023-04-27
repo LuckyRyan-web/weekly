@@ -9,6 +9,15 @@ export default (appInfo: MidwayAppInfo) => {
             port: 7001,
         },
         webhook: process.env.APP_WEBHOOK,
+        swagger: {
+            tags: [
+                {
+                    name: 'api',
+                    description: 'API 首页',
+                },
+            ],
+        },
+
         // security: {
         //   csrf: false,
         // },

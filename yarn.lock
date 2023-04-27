@@ -849,6 +849,11 @@
     js-yaml "^4.1.0"
     mkdirp "^0.5.1"
 
+"@midwayjs/swagger@^3.11.5":
+  version "3.11.5"
+  resolved "https://registry.yarnpkg.com/@midwayjs/swagger/-/swagger-3.11.5.tgz#45187f64e5c20262baf5b75b4c4a284ce6d6d01d"
+  integrity sha512-ybc7LE4ls1cuL7RBhfj6pYfc76CB59eGCWAC4UAoWV3UEeSng8wxyRz1Ssx+nTiBV1CRKZeWrtx8fPW9kCPIbA==
+
 "@midwayjs/typegoose@3":
   version "3.11.5"
   resolved "https://registry.yarnpkg.com/@midwayjs/typegoose/-/typegoose-3.11.5.tgz#039a35259502e7871ec49ce212bc3539a08b9b23"
@@ -7092,6 +7097,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+swagger-ui-dist@^4.18.2:
+  version "4.18.2"
+  resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-4.18.2.tgz#323308f1c1d87a7c22ce3e273c31835eb680a71b"
+  integrity sha512-oVBoBl9Dg+VJw8uRWDxlyUyHoNEDC0c1ysT6+Boy6CTgr2rUcLcfPon4RvxgS2/taNW6O0+US+Z/dlAsWFjOAQ==
 
 table@^6.0.9:
   version "6.8.1"
